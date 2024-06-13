@@ -1,0 +1,42 @@
+<mvc:View
+    controllerName="com.incture.vanithamamapplications.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <Shell>
+                <Page title="odata">
+                    <!-- <List
+                        items="{path:'/Categories' ,filters: [{path:'CategoryName', operator:'EQ', value1:'Dairy Products'}]}">
+                        <items>
+                            <StandardListItem
+                                title="{CategoryName}"
+                                description="{Description}"
+                            />
+                        </items>
+                    </List> -->
+                    <List
+                        items="{path:'/Categories' ,sorter: [{path:'CategoryID', descending:false,group:true}]}">
+                        <items>
+                            <StandardListItem
+                                title="{CategoryName}"
+                                description="{Description}"
+                            />
+                        </items>
+                    </List>
+
+                    <!-- <List items="{jsonModel>/listData}">
+                        <items>
+                            <StandardListItem description="{jsonModel>CategoryID}" title="{jsonModel>Description}" />
+                        </items>
+                    </List> -->
+                </Page>
+            </Shell>
+        </content>
+    </Page>
+</mvc:View>
